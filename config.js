@@ -11,8 +11,7 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://my-ghost-blog.com',
-        mail: {},
+        url: 'http://slarker.me',
         database: {
             client: 'sqlite3',
             connection: {
@@ -20,7 +19,16 @@ config = {
             },
             debug: false
         },
-
+	mail: {
+    transport: 'SMTP',
+    options: {
+        service: 'Gmail',
+        auth: {
+            user: 'zhangchaoeq@gmail.com',
+            pass: 'ehiVu9FXJqfKfP4d'
+        }
+    }
+},
         server: {
             host: '127.0.0.1',
             port: '2368'
